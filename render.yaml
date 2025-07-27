@@ -3,7 +3,7 @@ services:
     name: viral-reels-n8n
     env: docker
     plan: starter
-    repo: Yus1812/viral-reels-factory
+    repo: https://github.com/Yus1812/viral-reels-factory
     dockerfilePath: Dockerfile
     disk:
       name: n8n-data
