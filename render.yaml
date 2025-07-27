@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: viral-reels-n8n
+    env: docker
+    plan: starter
+    repo: https://github.com/YOUR_USERNAME/viral-reels-factory
+    dockerfilePath: Dockerfile
+    disk:
+      name: n8n-data
+      mountPath: /home/node/.n8n
+      sizeGB: 1
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: 'true'
+      - key: N8N_BASIC_AUTH_USER
+        value: yourusername
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: yoursecurepassword
+      - key: N8N_HOST
+        value: viral-reels-n8n.onrender.com
+      - key: N8N_PORT
+        value: '5678'
+      - key: WEBHOOK_TUNNEL_URL
+        value: https://viral-reels-n8n.onrender.com
+      - key: N8N_EDITOR_BASE_URL
+        value: https://viral-reels-n8n.onrender.com
+      - key: NODE_ENV
+        value: production
